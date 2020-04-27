@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Hacknovate 1.0</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+        
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
+
+<body>
+    <div id="page-wrapper">
+            <button onclick="topFunction()" id="mytop" title="Go to top"><i class="fa fa-chevron-up w3-hover-opacity" style="font-size:28px"></i></button>
+            <script>
+                //Get the button
+                var mybutton = document.getElementById("mytop");
+                
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 1300|| document.documentElement.scrollTop > 800) {
+                    mybutton.style.display = "block";
+                  } else {
+                    mybutton.style.display = "none";
+                  }
+                }
+                
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
+            
+            </script>
+
+        <!-- Header -->
+        <header id="header" style="position: fixed;background:rgba(28,28,36,0.85);border-bottom:solid 0px #e44c65;">
+            <img id="logo" src="./images/abesit.png" alt="ABESIT" style="float: left; width: 75px; margin-top: 10px; margin-left: 10px;">
+            <img src="./images/logot.png" alt="ABESIT" style="float: left; width: 150px; margin-top: -10px; margin-left: 5px;">
+            <img src="./images/itclub.png" alt="ABESIT" style="float: left; width: 70px; margin-top: 5px; margin-left: -5px;transform: translateY(10px);">
+            <img src="./images/bitbrain.png" alt="ABESIT" style="float: left; width: 70px; margin-top: 5px; margin-left: 5px;transform: translateY(10px);">
+            <img src="./images/heading.png" alt="ABESIT" style="float: left; width: 75px; margin-top: -5px; margin-left: 2px;transform: translateY(10px);">
+            <nav id="nav" style="position: fixed;font-weight:bold;color:#e44c65;padding-top:20px;">
+                <ul>
+                    <li><a class="button" href="index.html">Home</a></li>
+                    <li>
+                        <a  class="button" href="#about">About the hackathon</a>
+                        <!-- 								<ul>
+									<li><a href="left-sidebar.html">Left Sidebar</a></li>
+									<li><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option 1</a></li>
+											<li><a href="#">Option 2</a></li>
+											<li><a href="#">Option 3</a></li>
+											<li><a href="#">Option 4</a></li>
+										</ul>
+									</li>
+								</ul> -->
+                    </li>
+                    <li><a class="button" href="#two">Themes</a></li>
+                    <li><a class="button" href="#footer">FAQ's</a></li>
+                    <li><a class="button" href="#contact">Contact Us</a></li>
+                    <li><a href="#four" class="button primary">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+        	
+            <div class="content">
+                <header>
+                    <h2 id="greet" style="font-weight:900;background: rgba(28,28,36,0.75);padding:30px;border-radius:100px;">HACKNOVATE 1.0</h2>
+                    <div style="transform: translateX(100px);">
+                    <strong><p id="demo"  style="font-weight:800;background: rgba(28,28,36,0.75);padding:13px;border-radius:100px;width:170px; font-size: 20px; margin-left: -15px;"></p></strong>
+                    </div>
+                    <script type="text/javascript">
+                        // Set the date we're counting down to
+                        var countDownDate = new Date("Oct 18, 2019 23:59:59").getTime();
+
+                        // Update the count down every 1 second
+                        var x = setInterval(function() {
+
+                            // Get today's date and time
+                            var now = new Date().getTime();
+
+                            // Find the distance between now and the count down date
+                            var distance = countDownDate - now;
+
+                            // Time calculations for days, hours, minutes and seconds
+                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            // Output the result in an element with id="demo"
+                            document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
+                                minutes + "m " + seconds + "s ";
+
+                            // If the count down is over, write some text 
+                            if (distance < 0) {
+                                clearInterval(x);
+                                document.getElementById("demo").innerHTML = "EXPIRED";
+                            }
+                        }, 1000);
+                    </script>
+                </header>
+                <span class="image"><img src="images/logo.png" alt="" style="padding-top: 4em; border-radius: 10px;"></span>
+            </div>
+            <a href="#one" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- One -->
+        <section id="one" class="spotlight style1 bottom">
+            <div>
+            <h2 id="greet" class="none" style="text-weight:900;background: rgba(28,28,36,0.75);padding:30px;border-radius:100px;transform: translateY(-644px);width: 40%;margin: 12%;text-align: center; vertical-align: center; margin-left: 380px;">Software & Hardware Hackathon</h2>
+            <span class="image fit main"><img src="images/pic2.jpeg" alt="" /></span>
+            </div>
+            <div class="content" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4 col-12-medium">
+                            <header>
+                                <h2 style="color: #e44c65;font-weight:500">About The <br>Hackathon</h2>
+                                 <h2 style="color: white;font-weight:200">Download Brochure</h2>
+                                 <a href="./assets/Hacknovate.pdf" class="button primary">Brochure</a></li>
+                            </header>
+                        </div>
+                        <div class="col-4 col-12-medium">
+                            <p style="margin-top: 30px; font-size: 30px;">Einstein once said, <br>"<q><b>The only source of knowledge is experience."</b></q></p>
+                        </div>
+                        <div class="col-4 col-12-medium">
+                            <p>At Hacknovate 1.0, we bring together India’s best coders, developers, designers, innovators, creators and entrepreneurs of tomorrow. Hacknovate is geared up for those who are passionate about building, designing and innovating.
+                                It is a 12 Hr event where the enthusiasts meet, develop and compete in the product prototyping competition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#two" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Two -->
+        <section id="two" class="spotlight style2 right">
+            <span class="image fit main"><img src="images/fintech.jpg" alt="" /></span>
+            <div class="content">
+                <header>
+                    <h2>FinTech</h2>
+
+                </header>
+                <p> Your goal is to come up with a technically feasible and economic solution, that can contribute in digitizing the Indian economy. Your goal is to design and develop system that can make digital payment a new normal for every Indian citizen. Come up with ideas that can make digital payments more secure and easy for people from every corner of the country. Your solution should be workable, secure and scalable.</p>
+            </div>
+            <a href="#three" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Three -->
+        <section id="three" class="spotlight style3 left">
+            <span class="image fit main bottom"><img src="images/com.gif" alt="" /></span>
+            <div class="content">
+                <header>
+                    <h2>Smart communication/citizen service</h2>
+                </header>
+                <p>With mass urbanization, people face an ever-increasing demand for better service and quality of life. Create solution that can provide a platform that promote collaborative use of citizen services among the people. The system should empower people to communicate, discuss, mobilize and ultimately solve their communtiy issues in collaboration with the government.</p>
+            </div>
+            <a href="#four" class="goto-next scrolly">Next</a>
+        </section>
+
+
+
+        <!-- ddfg -->
+
+        <section id="two" class="spotlight style2 right">
+            <span class="image fit main"><img src="images/wast.jpg" alt="""></span>
+            <div class="content">
+                <header>
+                    <h2>Waste management</h2>
+                </header>
+                <p>A growing population and economy means increased volumes of waste generated. This puts pressure on waste management facilities, which are already in short supply. Create solution that leverage existing waste management services smartly and leads to efficient collection, management and disposal of waste especially in urban areas. Such system(hardware/software) will contribute to the smart city development scheme of the Indian government.</p>
+            </div>
+            <a href="#three" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Three -->
+        <section id="three" class="spotlight style3 left">
+            <span class="image fit main bottom"><img src="images/bulb.jpg" alt="" /></span>
+            <div class="content">
+                <header>
+                    <h2>Energy Efficiency</h2>
+
+                </header>
+                <p>Energy need is ever-growing. As population is increasing, the demand for sustainable and renewable energy is increasing. Innovate new and efficient system to generate, store and consume the energy in urban areas.</p>
+            </div>
+            <a href="#four" class="goto-next scrolly">Next</a>
+        </section>
+
+
+
+        <section id="two" class="spotlight style2 right">
+            <span class="image fit main"><img src="images/health.jpg" alt="" /></span>
+            <div class="content">
+                <header>
+                    <h2>Smart Healthcare system</h2>
+                </header>
+                <p> In India, the primary focus is on affordability and accessibility of healthcare to all. Under this theme, students need to innovate new products and make them in India to enhance affordability and access of healthcare solutions.</p>
+            </div>
+            <a href="#three" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Three -->
+        <section id="three" class="spotlight style3 left">
+            <span class="image fit main bottom"><img src="images/mind.jpg" alt="" /></span>
+            <div class="content">
+                <header>
+                    <h2>Open Innovation</h2>
+                    <!-- <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p> -->
+                </header>
+                <p>"Innovation seems no boundary."<br>New and innovative iddeas that can change the face of urbanization in India are invited in this category. The solution must be sustainable, efficient, economical and working.</p>
+            </div>
+            <a href="#four" class="goto-next scrolly">Next</a>
+        </section>
+
+
+        <!-- Four -->
+        <section id="four" class="wrapper style1 special fade-up">
+            <div class="container">
+                <header class="major1">
+                    <h2>Registration    </h2>
+              <!--       <p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p> -->
+                </header>
+                <div class="box alt">
+                    <div class="row gtr-uniform">
+                        <section class="col-6-medium col-12-xsmall borderline1" style="flex: 50%;">
+                           <strong><h3>Quiz</h3></strong>
+                           <strong><p style="color: white;">A quiz will be<br> organized as a part of Hacknovate 1.0 on<br> 18th Oct. It will be in two levels:<br>1. Basic level ( C/C++, Data Structure)<br>2. Core level (Java, OOPS, DBMS, OS, Networking, DS, IoT)</p>
+                           </strong> <a href="http://bit.ly/Register_Quiz" target="_blank" class="button primary" style="background-color:rgb(28, 28, 36); align-self: center;">Register</a>
+                        </section>
+                        
+                        <section class="col-6-medium col-12-xsmall" style="text-align:left;flex: 50%;">
+                            <h3>Hackathon</h3>
+                          <strong>  <p>The hackathon will be of 12 Hours. It will be in two edition:<br> 1. Software edition <br>2. Hardware Edition</p>
+                            </strong><a href="http://bit.ly/Register_Hackathon"  target="_blank" class="button primary" style="background-color: rgb(28, 28, 36);">Register</a>
+                        </section>
+                       <!--  <section class="col-4 col-6-medium col-12-xsmall">
+                            <span class="icon solid alt major fa-lock"></span>
+                            <h3>Massa arcu accumsan</h3>
+                            <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                        </section> -->
+                    </div>
+                </div>
+                <footer class="major">
+                   <!--  <ul class="actions special">
+                        <li><a href="#" class="button">Magna sed feugiat</a></li>
+                    </ul> -->
+                </footer>
+            </div>
+        </section>
+
+        <section id="coordinators" class="wrapper style1 special fade-up">
+            <div class="container">
+                <header class="major">
+                    <h2>Coordinators</h2>
+              <!--       <p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p> -->
+                </header>
+                <div class="box alt">
+                    <div class="row gtr-uniform">
+                        <section class="col-6-medium col-12-xsmall borderline1" style="flex: 50%;">
+                            <h3>Faculty Coordinators:</h3>
+                            <p>1. Prof(Dr.) Bipin Kumar Rai &nbsp;(9454285149)<br>2. Prof. Sumit Kumar &nbsp;(9891502406)<br>3. Prof. Aviral Malay &nbsp;(9871278678)<br></p>
+                            
+                        </section>
+                        
+                        <section class="col-6-medium col-12-xsmall" style="text-align:left;flex: 50%;">
+                            <h3>Student Coordinators:</h3>
+                            <p>1. Shiva Tiwari &nbsp;(8285735373)<br> 2. Ashish Bhatnagar &nbsp;(9911794608) <br></p>
+                            
+                        </section>
+                       <!--  <section class="col-4 col-6-medium col-12-xsmall">
+                            <span class="icon solid alt major fa-lock"></span>
+                            <h3>Massa arcu accumsan</h3>
+                            <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                        </section> -->
+                    </div>
+                </div>
+                <footer class="major">
+                   <!--  <ul class="actions special">
+                        <li><a href="#" class="button">Magna sed feugiat</a></li>
+                    </ul> -->
+                </footer>
+            </div>
+        </section>
+
+        
+        <section id="contact" class="wrapper style2 special fade">
+            <div class="container">
+                <header class="major invert contact">
+                    <h2>Contact Us</h2>
+                </header>
+                                            <div class="column" style="flex: 33.3%; padding-left: 100px;">
+                                                
+                                                <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-8285735373" target="_top"><i class="fa fa-phone"></i></a>  &nbsp;<a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:shivatiwari757@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b> &nbsp; Shiva Tiwari</b></p>
+                                                
+                                            </div>
+                                            <div class="column" style="flex: 33.3%; padding-left: 100px">
+                                                
+                                                <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-9911794608" target="_top"><i class="fa fa-phone"></i></a> &nbsp; <a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:bhatnagarashish1998@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b> &nbsp; Ashish Bhatnagar</b></p>
+                                                
+                                            </div>
+                                        </div>    
+            </div>
+        </section> 
+
+        <!-- Footer -->
+        <footer id="footer">
+            <header class="major faq">
+            <p style="font-size: 2em;">Frequently Asked Questions</p>
+            </header>
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">Who can attend?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">Students in a BTech programme, any year any branch any institute can form a team and participate in Hacknovate 1.0. While experience coding and programming is a huge plus, teams will also need people with strong presentation skills and brilliant ideas.
+                    </p>
+            </div>
+
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">Do I need a team?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">Teams can be up to 3 people. While you do have the option of working alone, hacknovate is a team event so working with others is encouraged.</p>
+            </div>
+
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">What do I need to bring?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">An official photo ID, a laptop and its charger. That’s about it!</p>
+            </div>
+
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">Do I have to compete?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">Absolutely not! However we do encourage you to take the chance, because there’s nothing to lose! Everyone has a chance to win, whether professional hacker or first-timer.
+                        We want you to have a great time and tons of fun. Just make yourself comfortable and we’re sure that you’ll take an awesome idea from concept to reality and enjoy yourself.
+                        </p>
+            </div>
+
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">I have never been to a hackathon, what now?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">Try it! People are super friendly, and no, you do not have to be an expert to participate. We have tons of mentors and helpers ready to help you, so please come over!</p>
+            </div>
+
+            <button class="accordion" style="text-align: center;max-width:70% ; border-radius: 100px; margin-bottom: 10px;">What is a hackathon?</button>
+            <div class="panel" style="color: black;max-width:70% ; text-align: center; border-radius: 100px; margin-bottom: 10px;transform: translateX(21.5%)">
+                <p style="margin:0;padding:3%;">A hackathon is best described as an “invention marathon”. Anyone who has an interest in technology attends a hackathon to learn, build & share their creations over the course of a weekend in a relaxed and welcoming atmosphere. You don’t have to be a programmer and you certainly don’t have to be majoring in Computer Science.
+                    </p>
+            </div>
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                            panel.style.display = "none";
+                        } else {
+                            panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+            <!-- 					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul> -->
+        </footer>
+
+        <!-- Developers -->
+        <section id="contact" class="wrapper style2 special fade">
+            <div class="container">
+                <header class="major invert team">
+                    <h2 style="transform: translateX(-20px)">Developing Team</h2>
+                </header>
+                        <div class="row" style="display: flex;">
+                                <div class="column" style="flex: 33.3%; padding-left: 100px;">
+                                    <img src="./images/hari.jpeg" style="max-width: 250px;border-radius: 50%;border:3px solid white;" class="avatar">
+                                    <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-8130771263" target="_top"><i class="fa fa-phone"></i></a>  <a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:hariomkushwaha1947@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b>  Hariom kushwaha</b></p>
+                                </div>
+                                <div class="column" style="flex: 33.3%; padding-left: 100px;">
+                                    <img src="./images/tarun.jpg" style="max-width: 250px;border-radius: 50%;border:3px solid white;" class="avatar">
+                                    <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-9759644218" target="_top"><i class="fa fa-phone"></i></a>  <a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:tarunagarwal27.99@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b>  Tarun Agarawal</b></p>
+                                    
+                                </div>
+                                <div class="column" style="flex: 33.3%; padding-left: 100px">
+                                    <img src="./images/sat.jpeg" style="max-width: 250px;border-radius: 50%;border:3px solid white;" class="avatar">
+                                    <p style="color: white;text-decoration: none;"><a style="color: white;text-decoration: none;border-radius: 50%;padding:10px 10px;border: 1px solid white;" href="tel:+91-7275581829" target="_top"><i class="fa fa-phone"></i></a>  <a style="color: white;text-decoration: none;border-radius: 50%;padding:10px;border: 1px solid white;" href="mailto:kmrsatyarth9@gmail.com?Subject=Query%20regarding%20hacknovate" target="_top"><i class="fa fa-envelope"></i></a><b>  Kumar Satyarth</b></p>
+                                    
+                                </div>
+                            </div>    
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
